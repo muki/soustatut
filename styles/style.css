@@ -1,0 +1,42 @@
+/* sandbox 
+*/
+
+h1 {
+	padding-bottom: 200px;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#container {
+	width: 100%;
+	position: relative;
+}
+
+#leftColumn {
+	width: 50%;
+	position: absolute;
+	background: red;
+}
+
+#rightColumn {
+	right: 0px;
+	width: 50%;
+	position: fixed;
+	background: green;
+	top: -1680px;
+}
+
+.slide {
+	clear: both;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	display: table;
+	position: relative;
+}
