@@ -1,10 +1,6 @@
 /* sandbox 
 */
 
-h1 {
-	padding-bottom: 200px;
-}
-
 body, html {
 	height: 100%;
 	min-height: 100%;
@@ -19,7 +15,6 @@ body, html {
 #leftColumn {
 	width: 50%;
 	position: absolute;
-	background: red;
 }
 
 #rightColumn {
@@ -36,6 +31,142 @@ body, html {
 	display: table;
 	position: relative;
 }
+
+/* ########################### */
+/* Animated background (no JS) */
+/* ########################### */
+
+/* Animation definitions */
+@-webkit-keyframes 'downright' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 225px 225px;
+	}
+}
+@-moz-keyframes 'downright' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 225px 225px;
+	}
+}
+
+@-o-keyframes 'downright' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 225px 225px;
+	}
+}
+
+@-webkit-keyframes 'downleft' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -225px 225px;
+	}
+}
+@-moz-keyframes 'downleft' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -225px 225px;
+	}
+}
+@-o-keyframes 'downleft' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -225px 225px;
+	}
+}
+
+@-webkit-keyframes 'upright' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 225px -225px;
+	}
+}
+@-moz-keyframes 'upright' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 225px -225px;
+	}
+}
+@-o-keyframes 'upright' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 225px -225px;
+	}
+}
+
+@-webkit-keyframes 'upleft' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -225px -225px;
+	}
+}
+@-moz-keyframes 'upleft' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -225px -225px;
+	}
+}
+@-o-keyframes 'upleft' {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: -225px -225px;
+	}
+}
+
+/* End of animation definitions */
+
+/* General-purpose class for animated background */
+/* The background moves up and to the right.     */
+
+.anibg {
+	width: 560px; 
+	height: 400px; 
+	background-image: url(../img/ozadje4.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x repeat-y;
+	
+	-webkit-animation: upright 5s linear infinite;
+	-moz-animation: upright 5s linear infinite;
+	-o-animation: upright 5s linear infinite;
+}
+
+/* End of general-purpose class for animated background */
+
+/* ################################## */
+/* End of animated background (no JS) */
+/* ################################## */
+
+
+
+
+
+
+/* Junk code, to be deleted */
 
 #leftColumn .slide:nth-child(even) {
 	background: green;
