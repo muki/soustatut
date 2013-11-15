@@ -1,9 +1,67 @@
-/* sandbox 
-*/
+/* $$$$$$$$$$$$$$$$$$$$$$ */
+/* Your colors, gentlemen */
+/* $$$$$$$$$$$$$$$$$$$$$$ 
+
+[first screen]
+brick		#c0392b
+green		#2ecc71
+black		opacity 90%
+
+[second screen]
+purple		#180f26
+yellow2		#c2bb00
+shadow2		#0d0717
+
+[third screen]
+yellow3		#ffa200
+turquoise	#00938e
+shadow3		#845400
+
+[fourth screen]
+blue		#01a8ff
+orange		#ff9000
+buttons		#0082c5
+shadow4		#006294
+popupUp		#0097e5
+popupBody	#64caff
+popupButton	#0074b0
+
+[fifth screen]
+pink		#cd0145
+green		#14e76d
+footer		#b5003c
+
+   $$$$$$$$$$$$$ */
+/* End of colors */
+/* $$$$$$$$$$$$$ */
+
+/* Our font */
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/bebasneue-webfont.eot');
+    src: url('../fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue-webfont.woff') format('woff'),
+         url('../fonts/bebasneue-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* End of font */
+
+.hidden {
+	display: none;
+}
 
 body, html {
 	height: 100%;
 	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	padding: 0;
 	margin: 0;
 }
 
@@ -27,156 +85,181 @@ body, html {
 	clear: both;
 	float: left;
 	width: 100%;
-	overflow: hidden;
+	height: 100%;
+	overflow-y: hidden !important;
 	display: table;
 	position: relative;
+	top: 0;
 }
 
-/* ########################### */
-/* Animated background (no JS) */
-/* ########################### */
+/* slide content centering logic */
+/* nest inner in middle and all
+   things in inner will be 
+   centered */
 
-/* Animation definitions */
-@-webkit-keyframes 'downright' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 225px 225px;
-	}
-}
-@-moz-keyframes 'downright' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 225px 225px;
-	}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
 }
 
-@-o-keyframes 'downright' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 225px 225px;
-	}
+.inner {
+	margin-left: auto;
+	margin-right: auto;
+    top: -50%;
+    position: relative;
+    text-align: center;
+}
+/* logic in css - haha */
+
+h1, h2, h3 {
+	font-family: 'Bebas Neue', sans-serif;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+p {
+	font-family: 'Arimo', sans-serif;
+	text-align: left;
 }
 
-@-webkit-keyframes 'downleft' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -225px 225px;
-	}
+.fwd {
+	position: fixed;
+	bottom: 0px;
+	z-index: 100;
+	width: 146px;
 }
-@-moz-keyframes 'downleft' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -225px 225px;
-	}
+.fwd p {
+	text-align: center;
+	font-family: 'Arimo';
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 20px;
+	margin: 5px;
+	color: #c2bb00;
 }
-@-o-keyframes 'downleft' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -225px 225px;
-	}
+.triangle {
+	width: 0; 
+	height: 0; 
+	border-left: 73px solid transparent;
+	border-right: 73px solid transparent;
+	border-top: 67px solid #c2bb00;
 }
+/*.triangle-small {
+	width: 0; 
+	height: 0; 
+	border-left: 73px solid transparent;
+	border-right: 73px solid transparent;
+	border-top: 67px solid #f00;
+}*/
 
-@-webkit-keyframes 'upright' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 225px -225px;
-	}
-}
-@-moz-keyframes 'upright' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 225px -225px;
-	}
-}
-@-o-keyframes 'upright' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 225px -225px;
-	}
+/* slide two */
+
+.slide.two {
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
-@-webkit-keyframes 'upleft' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -225px -225px;
-	}
-}
-@-moz-keyframes 'upleft' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -225px -225px;
-	}
-}
-@-o-keyframes 'upleft' {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -225px -225px;
-	}
+.slide.two.left .inner {
+	width: 400px;
 }
 
-/* End of animation definitions */
-
-/* General-purpose class for animated background */
-/* The background moves up and to the right.     */
-
-.anibg {
-	width: 560px; 
-	height: 400px; 
-	background-image: url(../img/ozadje4.png);
-	background-position: 0px 0px;
-	background-repeat: repeat-x repeat-y;
-	
-	-webkit-animation: upright 5s linear infinite;
-	-moz-animation: upright 5s linear infinite;
-	-o-animation: upright 5s linear infinite;
+.slide.two.left h1 {
+	font-size: 100px;
+	color: #c2bb00;
+	margin: 0;
+	padding: 0;
+	text-align: left;
 }
 
-/* End of general-purpose class for animated background */
-
-/* ################################## */
-/* End of animated background (no JS) */
-/* ################################## */
-
-
-
-
-
-
-/* Junk code, to be deleted */
-
-#leftColumn .slide:nth-child(even) {
-	background: green;
+.slide.two.left .info h2 {
+	text-align: left;
+	font-size: 50px;
+	color: #c2bb00;
 }
-#leftColumn .slide:nth-child(odd) {
-	background: red;
+.slide.two.left .info p {
+	font-size: 24px;
+	color: #c2bb00;
+	text-align: left;
 }
-#rightColumn .slide:nth-child(even) {
-	background: red;
+
+.circlecontainer {
+	padding-top: 5%;
+	max-height: 100%;
 }
-#rightColumn .slide:nth-child(odd) {
-	background: green;
+
+.circle {
+	cursor: pointer;
+	border-radius: 50%;
+	width: 40%;
+	height: 0;
+	padding-bottom: 40%;
 }
+
+.circle.control {
+	z-index: 100;
+	top: 10%;
+	margin-left: 10%;
+	background: url('../img/bg21.png');
+}
+.circle.control img {
+	width: 90%;
+	margin-top: 15%;
+}
+
+.circle.recycle {
+	margin-left: 50%;
+	margin-top: -20%;
+	background: url('../img/bg22.png');
+}
+.circle.recycle img {
+	width: 80%;
+	margin-top: 20%;
+}
+
+.circle.cash {
+	margin-left: 15%;
+	margin-top: -15%;
+	background: url('../img/bg23.png');
+}
+.circle.cash img {
+	width: 80%;
+	margin-top: 20%;
+}
+
+/* end of slide two */
+
+/* slide three */
+
+.slide.three {
+	background-color: #ffa200;
+}
+.slide.three.left h1 {
+	color: #00938e;
+	text-shadow: 3px 3px 10px #845400;
+	font-size: 100px;
+	padding: 0;
+	margin: 0;
+}
+
+/* end of slide three */
+
+/* slide four */
+
+.slide.four {
+	background-color: #01a8ff;
+}
+.slide.four.left h1 {
+	font-size: 100px;
+	color: #ff9000;
+	padding: 0;
+	margin: 0;
+	text-shadow: 3px 3px 10px #006294;
+}
+
+/* end of slide four*/
+
+/* slide five */
+
+.slide.five {
+	background-color: #cd0145;	
+}
+
+/* end of slide five */
