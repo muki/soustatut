@@ -69,6 +69,7 @@ function pageActions(whatPage) {
 		$('.fwd p').text('Zakaj to počnejo?');
 		$('.fwd p').css('color', '#2ecc71');
 		$('.triangle').css('border-top-color', '#2ecc71');
+		$('.arrow').css('background-image', 'url(./img/puscica1.png)');
 		
 		$('.slide.one.left').children().fadeIn('slow', function() {
 			popMeAnArticle();
@@ -80,6 +81,7 @@ function pageActions(whatPage) {
 		$('.fwd p').text('Kaj je rešitev?');
 		$('.fwd p').css('color', '#c2bb00');
 		$('.triangle').css('border-top-color', '#c2bb00');
+		$('.arrow').css('background-image', 'url(./img/puscica2.png)');
 	}
 	
 	// lands on slide three
@@ -87,6 +89,7 @@ function pageActions(whatPage) {
 		$('.fwd p').text('Kaj moram narediti?');
 		$('.fwd p').css('color', '#00938e');
 		$('.triangle').css('border-top-color', '#00938e');
+		$('.arrow').css('background-image', 'url(./img/puscica3.png)');
 	}
 	
 	// lands on slide four
@@ -94,6 +97,7 @@ function pageActions(whatPage) {
 		$('.fwd p').text('Še eno uslugo ...');
 		$('.fwd p').css('color', '#ff9000');
 		$('.triangle').css('border-top-color', '#ff9000');
+		$('.arrow').css('background-image', 'url(./img/puscica4.png)');
 	}
 	
 	// lands on slide five

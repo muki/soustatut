@@ -151,6 +151,14 @@ p {
 	border-top: 67px solid #2ecc71;
 	cursor: pointer;
 }
+.arrow {
+	width: 48px;
+	height: 33px;
+	position: relative;
+	top: -45px;
+	left: -24px;
+	background-image: url('../img/puscica1.png');
+}
 /*.triangle-small {
 	width: 0; 
 	height: 0; 
