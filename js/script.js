@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	
-	//set .slide height to window height
+	// set .slide height to window height
 	$('.slide').height($(window).height());
-	//set #rightColumn properly to the top
+	// set #rightColumn properly to the top
 	$('#rightColumn').css('top', -$(window).height()*($('#rightColumn').children().length-1));	
-	//position triangles
+	// position triangles
 	$('.fwd').css('left', $('.slide').width()-73);
-	//initiate scroller
+	// initiate scroller
 	scroller();
-	//initiate anibg
+	// initiate anibg
 	$('.anibg').hover(
 		function() {			
 			anibg($(this))
@@ -26,15 +26,23 @@ $(document).ready(function() {
 	
 	// screen one //
 	
-	//create hover for screen 1
+	// create hover for screen 1
 	$('.slide.one.left a').hover(function() {
 		$('.linkic').addClass('trans');
 	}, function() {
 		$('.linkic').removeClass('trans');
 	});
 	
-	//refresh button
+	// refresh button
 	$('.seprosim').on('click', function() {
+		
+		// clear all timeouts
+		var id = window.setTimeout(function() {}, 0);
+		
+		while (id--) {
+		    window.clearTimeout(id); // will do nothing if no timeout with id is present
+		}
+		texting = 0;
 		popMeAnArticle();
 	});
 	
