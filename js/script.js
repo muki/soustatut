@@ -72,7 +72,54 @@ $(document).ready(function() {
 	
 	// end of screen two //
 	
+	// screen three //
+
+	// set container height
+	$('.squarecontainer').height($('.squarecontainer').width());
+	
+	// click on transparentnost makes it grow
+	$('.transparentnost').on('click', function() {
+		$(this).animate({
+			'height': '+=7%',
+			'width': '+=7%',
+			'top': '-=7%',
+			'left': '-=7%'
+		}, {
+			duration: 400,
+			queue: false,
+			easing: 'swing',
+			complete: function() {
+				console.log('ping');
+			}
+		});
+	});
+	
+	// end of screen three //
+	
 	// page actions
 	pageActions(whatPage());
 	
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -426,6 +426,51 @@ p {
 	margin: 0;
 }
 
+.squarecontainer {
+	display: box;
+	margin: auto;
+	width: 60%;
+	background-color: black;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.square {
+	width: 47.5%;
+	height: 47.5%;
+	position: absolute;
+	float: left;
+	cursor: pointer;
+}
+.transparentnost {
+	top: 0px;
+	left: 0px;
+	background-image: url('../img/bg31.png');
+	background-repeat: repeat;
+}
+.politizacija {
+/*	margin-bottom: 5%;*/
+	top: 0px;
+	right: 0px;
+	background-image: url('../img/bg32.png');
+	background-repeat: repeat;
+}
+.demokratizacija {
+/*	margin-right: 5%;*/
+	bottom: 0px;
+	left: 0px;
+	background-image: url('../img/bg33.png');
+	background-repeat: repeat;
+}
+.samoorganiziranje {
+	bottom: 0px;
+	right: 0px;
+	background-image: url('../img/bg34.png');
+	background-repeat: repeat;
+}
+
 /* end of slide three */
 
 /* slide four */
