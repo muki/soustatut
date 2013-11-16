@@ -23,6 +23,10 @@ $(document).ready(function() {
 			pageActions(whatPage());
 		});
 	});
+	// fwd button arrow bounce
+	$('.fwd').on('mouseenter', function() {
+		$('.arrow').effect('bounce', 600)
+	});
 	
 	// screen one //
 	

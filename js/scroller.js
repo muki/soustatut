@@ -45,7 +45,7 @@ function scroller() {
 	        		pageActions(whatPage());
 	        	});
 	        }
-	        else if (diff == 0) {
+	        else if (diff == 0 && whatPage() == 1) {
 	        	pageActions(whatPage());
 	        }
 	        
@@ -82,6 +82,7 @@ function pageActions(whatPage) {
 		$('.fwd p').css('color', '#c2bb00');
 		$('.triangle').css('border-top-color', '#c2bb00');
 		$('.arrow').css('background-image', 'url(./img/puscica2.png)');
+		$('.arrow').effect('bounce', 600);
 	}
 	
 	// lands on slide three
@@ -90,6 +91,7 @@ function pageActions(whatPage) {
 		$('.fwd p').css('color', '#00938e');
 		$('.triangle').css('border-top-color', '#00938e');
 		$('.arrow').css('background-image', 'url(./img/puscica3.png)');
+		$('.arrow').effect('bounce', 600);
 	}
 	
 	// lands on slide four
@@ -98,6 +100,7 @@ function pageActions(whatPage) {
 		$('.fwd p').css('color', '#ff9000');
 		$('.triangle').css('border-top-color', '#ff9000');
 		$('.arrow').css('background-image', 'url(./img/puscica4.png)');
+		$('.arrow').effect('bounce', 600);
 	}
 	
 	// lands on slide five
