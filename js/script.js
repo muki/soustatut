@@ -14,6 +14,31 @@ $(document).ready(function() {
 			anibg($(this))
 		}
 	);
+	// fwd button
+	$('.fwd').on('click', function() {
+		$('body').animate({
+			scrollTop: $(window).scrollTop() + $(window).height()
+		}, 700, 'swing', function() {
+			$('body').stop(true, true);
+			pageActions(whatPage());
+		});
+	});
+	
+	// screen one //
+	
+	//create hover for screen 1
+	$('.slide.one.left a').hover(function() {
+		$('.linkic').addClass('trans');
+	}, function() {
+		$('.linkic').removeClass('trans');
+	});
+	
+	//refresh button
+	$('.seprosim').on('click', function() {
+		popMeAnArticle();
+	});
+	
+	// end of screen one//
 	
 	// screen two //
 	
@@ -34,5 +59,8 @@ $(document).ready(function() {
 	});
 	
 	// end of screen two //
+	
+	// page actions
+	pageActions(whatPage());
 	
 });

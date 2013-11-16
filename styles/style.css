@@ -29,9 +29,9 @@ popupButton	#0074b0
 [fifth screen]
 pink		#cd0145
 green		#14e76d
-footer		#b5003c
+footer		#b5003c */
 
-   $$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$ */
 /* End of colors */
 /* $$$$$$$$$$$$$ */
 
@@ -58,6 +58,12 @@ body, html {
 	min-height: 100%;
 	margin: 0;
 	padding: 0;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
 }
 
 div {
@@ -126,6 +132,7 @@ p {
 	bottom: 0px;
 	z-index: 100;
 	width: 146px;
+	cursor: pointer;
 }
 .fwd p {
 	text-align: center;
@@ -134,14 +141,15 @@ p {
 	text-transform: uppercase;
 	font-size: 20px;
 	margin: 5px;
-	color: #c2bb00;
+	color: #2ecc71;
 }
 .triangle {
 	width: 0; 
 	height: 0; 
 	border-left: 73px solid transparent;
 	border-right: 73px solid transparent;
-	border-top: 67px solid #c2bb00;
+	border-top: 67px solid #2ecc71;
+	cursor: pointer;
 }
 /*.triangle-small {
 	width: 0; 
@@ -150,6 +158,177 @@ p {
 	border-right: 73px solid transparent;
 	border-top: 67px solid #f00;
 }*/
+
+/* slide one */
+
+.slide.one {
+	background-color: #c0392b;
+}
+
+.slide.one.left .box {
+	z-index: 100;
+	position: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding-left: 15%;
+}
+.slide.one.left .box h1 {
+	font-size: 5em;
+	color: #2ecc71;
+	height: 280px;
+}
+.slide.one.left .box h1 span {
+	color: rgba(0, 0, 0, 0.9);
+}
+.slide.one.left .box a {
+	color: #000000;
+}
+.slide.one.left .box a h2 {
+	font-family: 'Arimo';
+	text-transform: none;
+	text-align: right;
+	margin-top: 10px;
+	font-size: 24px;
+	cursor: pointer;
+}
+.linkic {
+	display: inline-block;
+	position: relative;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: #000000;
+	top: -3px;
+	border: 2px solid #000000;
+	-webkit-transition: background 0.2s ease-in-out;
+	-moz-transition: background 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+}
+.linkic i {
+	font-size: 22px;
+	color: #c0392b;
+	position: relative;
+	font-weight: 400;
+	top: 2px;
+	left: -1px;
+}
+
+/* linkic icon animation */
+
+.linkic.trans {
+	background-color: #c0392b;
+	border: 2px solid #000000;
+	-webkit-transition: background 0.2s ease-in-out;
+	-moz-transition: background 0.2s ease-in-out;
+	-ms-transition: background 0.2s ease-in-out;
+	-o-transition: background 0.2s ease-in-out;
+	transition: background 0.2s ease-in-out;
+}
+.linkic.trans i {
+	color: #000000;
+	-webkit-transition: color 0.2s;
+	-moz-transition: color 0.2s;
+	-ms-transition: color 0.2s;
+	-o-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+/* end of linkic icon animation */
+
+.seprosim {
+	cursor: pointer;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #2ecc71;
+	text-align: center;
+	transition: background 0.2s;
+	border: 2px solid #2ecc71;
+}
+.seprosim i {
+	font-size: 80px;
+	position: relative;
+	left: -7px;
+	top: 7px;
+	color: #c0392b;
+	transition: color 0.2s;
+}
+
+/* seprosim icon rotation */
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spinAround {
+	from {
+		-moz-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-ms-keyframes spinAround {
+    from {
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes spinAround {
+    from {
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinAround {
+    from {
+    	-webkit-transform: rotate(0deg);
+    	-moz-transform: rotate(0deg);
+    	-ms-transform: rotate(0deg);
+    	-o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+    	-webkit-transform: rotate(360deg);
+    	-moz-transform: rotate(360deg);
+    	-ms-transform: rotate(360deg);
+    	-o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.seprosim:hover {
+	-webkit-animation: spinAround 2s linear infinite;
+	animation: spinAround 2s linear infinite;
+	color: black;
+	background: #c0392b;
+	border: 2px solid #2ecc71;
+	transition: background 0.2s;
+}
+.seprosim i:hover {
+	color: #2ecc71;
+	transition: color 0.2s;
+}
+/* end of seprosim icon rotation */
+/* end of slide one */
 
 /* slide two */
 

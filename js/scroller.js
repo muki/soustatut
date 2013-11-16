@@ -1,4 +1,7 @@
+var first = 0;
+
 function scroller() {
+	
 	// update right column when scrolling
 	$(document).scroll(function() {
 		$('#rightColumn').css(
@@ -12,7 +15,13 @@ function scroller() {
 	
 	// check if stopped scrolling
 	$(window).scroll(function() {
-	    clearTimeout($.data(this, 'scrollTimer'));
+		
+		clearTimeout($.data(this, 'scrollTimer'));
+		if (first == 0) {
+			$('.slide.one.left').children().fadeOut('slow');
+			first = 1;
+		}
+
 	    $.data(this, 'scrollTimer', setTimeout(function() {	        
 	        // calculate diff absolute value
 	        diff = Math.abs(parseInt($('#rightColumn').css('top').split('px')[0]) % $(window).height());
@@ -24,6 +33,7 @@ function scroller() {
 	        		scrollTop: $(window).scrollTop() + diff
 	        	}, 500, 'swing', function() {
 	        		$('body').stop(true, true);
+	        		pageActions(whatPage());
 	        	});
 	        }
 	        // if diff is larger than half of screen
@@ -32,11 +42,61 @@ function scroller() {
 	        		scrollTop: $(window).scrollTop() - ($(window).height()-diff)
 	        	}, 500, 'swing', function() {
 	        		$('body').stop(true, true);
+	        		pageActions(whatPage());
 	        	});
 	        }
+	        else if (diff == 0) {
+	        	pageActions(whatPage());
+	        }
 	        
-	        console.log("Haven't scrolled in 500ms!");
 	    }, 250));
 	});
 	
+}
+
+// helper function returns slide number
+function whatPage() {
+	return Math.ceil($(window).scrollTop()/$(window).height()+1);
+}
+
+// actions on pages
+function pageActions(whatPage) {
+	// lands on slide one
+	if (whatPage == 1) {
+	
+		first = 0;
+	
+		$('.fwd p').text('Zakaj to počnejo?');
+		$('.fwd p').css('color', '#2ecc71');
+		$('.triangle').css('border-top-color', '#2ecc71');
+		
+		$('.slide.one.left').children().fadeIn('slow', function() {
+			popMeAnArticle();
+		});
+	}
+	
+	// lands on slide two
+	if (whatPage == 2) {
+		$('.fwd p').text('Kaj je rešitev?');
+		$('.fwd p').css('color', '#c2bb00');
+		$('.triangle').css('border-top-color', '#c2bb00');
+	}
+	
+	// lands on slide three
+	if (whatPage == 3) {
+		$('.fwd p').text('Kaj moram narediti?');
+		$('.fwd p').css('color', '#00938e');
+		$('.triangle').css('border-top-color', '#00938e');
+	}
+	
+	// lands on slide four
+	if (whatPage == 4) {
+		$('.fwd p').text('Še eno uslugo ...');
+		$('.fwd p').css('color', '#ff9000');
+		$('.triangle').css('border-top-color', '#ff9000');
+	}
+	
+	// lands on slide five
+	if (whatPage == 5) {
+	}
 }
