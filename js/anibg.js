@@ -1,5 +1,5 @@
 function anibg(element) {
-	$(element).stop(true, true).animate({
+	$(element).animate({
 		'background-position-x': '+=1px',
 		'background-position-y': '-=1px'
 	}, {
@@ -12,4 +12,66 @@ function anibg(element) {
 			}
 		}
 	});
+}
+
+// TODO
+function emsmallen(element) {
+	switch(element) {
+		case '.transparentnost':
+			$(element).animate({
+				'height': '-=7%',
+				'width': '-=7%',
+				'top': '+=7%',
+				'left': '+=7%'
+			}, {
+				duration: 400,
+				queue: false,
+				easing: 'swing',
+				complete: function() {
+				}
+			});
+			break;
+		case '.politizacija':
+			$(element).animate({
+				'height': '-=7%',
+				'width': '-=7%',
+				'top': '+=7%',
+				'right': '+=7%'
+			}, {
+				duration: 400,
+				queue: false,
+				easing: 'swing',
+				complete: function() {
+				}
+			});
+			break;
+		case '.demokratizacija':
+			$(element).animate({
+				'height': '-=7%',
+				'width': '-=7%',
+				'bottom': '+=7%',
+				'right': '+=7%'
+			}, {
+				duration: 400,
+				queue: false,
+				easing: 'swing',
+				complete: function() {
+				}
+			});
+			break;
+		case '.samoorganiziranje':
+			$(element).animate({
+				'height': '-=7%',
+				'width': '-=7%',
+				'bottom': '+=7%',
+				'left': '+=7%'
+			}, {
+				duration: 400,
+				queue: false,
+				easing: 'swing',
+				complete: function() {
+				}
+			});
+			break;
+	}
 }

@@ -77,8 +77,12 @@ $(document).ready(function() {
 	// set container height
 	$('.squarecontainer').height($('.squarecontainer').width());
 	
+	// set variable to track bigger square
+	var embiggened = '';
+
 	// click on transparentnost makes it grow
 	$('.transparentnost').on('click', function() {
+		emsmallen(embiggened);
 		$(this).animate({
 			'height': '+=7%',
 			'width': '+=7%',
@@ -89,7 +93,59 @@ $(document).ready(function() {
 			queue: false,
 			easing: 'swing',
 			complete: function() {
-				console.log('ping');
+				embiggened = '.transparentnost';
+			}
+		});
+	});
+	
+	// click on politizacija makes it grow
+	$('.politizacija').on('click', function() {
+		emsmallen(embiggened);
+		$(this).animate({
+			'height': '+=7%',
+			'width': '+=7%',
+			'top': '-=7%',
+			'right': '-=7%'
+		}, {
+			duration: 400,
+			queue: false,
+			easing: 'swing',
+			complete: function() {
+				embiggened = '.politizacija';
+			}
+		});
+	});
+	// click on demokratizacija makes it grow
+	$('.demokratizacija').on('click', function() {
+		emsmallen(embiggened);
+		$(this).animate({
+			'height': '+=7%',
+			'width': '+=7%',
+			'bottom': '-=7%',
+			'right': '-=7%'
+		}, {
+			duration: 400,
+			queue: false,
+			easing: 'swing',
+			complete: function() {
+				embiggened = '.demokratizacija';
+			}
+		});
+	});
+	// click on samoorganiziranje makes it grow
+	$('.samoorganiziranje').on('click', function() {
+		emsmallen(embiggened);
+		$(this).animate({
+			'height': '+=7%',
+			'width': '+=7%',
+			'bottom': '-=7%',
+			'left': '-=7%'
+		}, {
+			duration: 400,
+			queue: false,
+			easing: 'swing',
+			complete: function() {
+				embiggened = '.samoorganiziranje';
 			}
 		});
 	});

@@ -326,7 +326,7 @@ p {
 .seprosim:hover {
 	-webkit-animation: spinAround 2s linear infinite;
 	animation: spinAround 2s linear infinite;
-	color: black;
+	color: #000000;
 	background: #c0392b;
 	border: 2px solid #2ecc71;
 	transition: background 0.2s;
@@ -430,7 +430,6 @@ p {
 	display: box;
 	margin: auto;
 	width: 60%;
-	background-color: black;
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
@@ -438,8 +437,8 @@ p {
 	transform: rotate(45deg);
 }
 .square {
-	width: 47.5%;
-	height: 47.5%;
+	width: 48.75%;
+	height: 48.75%;
 	position: absolute;
 	float: left;
 	cursor: pointer;
@@ -460,13 +459,13 @@ p {
 .demokratizacija {
 /*	margin-right: 5%;*/
 	bottom: 0px;
-	left: 0px;
+	right: 0px;
 	background-image: url('../img/bg33.png');
 	background-repeat: repeat;
 }
 .samoorganiziranje {
 	bottom: 0px;
-	right: 0px;
+	left: 0px;
 	background-image: url('../img/bg34.png');
 	background-repeat: repeat;
 }
